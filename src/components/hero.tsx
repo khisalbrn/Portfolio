@@ -34,7 +34,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-full blur-2xl transform scale-110"></div>
       <div className="relative w-full h-full rounded-full border-4 border-white shadow-lg overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1573495804669-ec82ad00f327?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGVuZ2luZWVyJTIwdGVjaHxlbnwxfHx8fDE3NTc0MzI1OTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src={`${import.meta.env.BASE_URL}Photos/ProfilePic.png`}
           alt="Khisa - Professional Engineer"
           className="w-full h-full object-cover"
         />
@@ -169,7 +169,7 @@ export function Hero() {
             >
               <div className="flex justify-center lg:justify-start space-x-6">
                 <Button variant="ghost" size="sm" className="text-primary hover:text-accent hover:bg-primary/10 transition-all duration-300" asChild>
-                  <a href="#" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/in/khisaleelebrun/" aria-label="LinkedIn">
                     <Linkedin size={20} />
                   </a>
                 </Button>

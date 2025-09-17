@@ -15,12 +15,12 @@ export function Footer() {
           
           <div className="flex space-x-4">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary transition-colors duration-300" asChild>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/khisaleelebrun/" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
             </Button>
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary transition-colors duration-300" asChild>
-              <a href="mailto:your.email@example.com" aria-label="Email">
+              <a href="mailto:lebrunkhisalee@gmail.com" aria-label="Email">
                 <Mail size={20} />
               </a>
             </Button>

@@ -106,7 +106,7 @@ export function About({ onViewHobbies }: AboutProps) {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="font-medium">Bachelor's Degree</span>
+                  <span className="font-medium">Bachelor's Degree - Electrical Engineering</span>
                   <Badge variant="default" className="bg-info text-white">
                     <CheckCircle className="w-3 h-3 mr-1" />
                     Obtained

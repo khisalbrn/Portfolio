@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { ArrowLeft, Camera, Mountain, Music, Book, Gamepad2, Palette, Wrench, Plane } from "lucide-react";
+import { ArrowLeft, Footprints, Pin, Heart, Scissors, Waves, Droplet, Camera, Mountain, Music, Book, Gamepad2, Palette, Wrench, Plane } from "lucide-react";
 
 interface HobbiesPageProps {
   onBack: () => void;
@@ -11,77 +11,78 @@ interface HobbiesPageProps {
 export function HobbiesPage({ onBack }: HobbiesPageProps) {
   const hobbies = [
     {
-      title: "Drone Racing & Aerial Photography",
-      icon: <Plane className="w-6 h-6 text-primary" />,
-      image: "https://images.unsplash.com/photo-1508444845599-5c89863b1c44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMHJhY2luZyUyMGZwdnxlbnwxfHx8fDE3NTcxNzg0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Beyond professional drone work, I'm passionate about FPV racing and capturing stunning aerial footage. Racing drones has taught me precision control and quick decision-making under pressure.",
-      skills: ["FPV Flying", "Aerial Cinematography", "Custom Builds", "Racing Strategies"],
-      achievements: ["Local Racing League Champion 2023", "500+ Hours FPV Flight Time", "Custom Racing Drone Designs"],
-      timeCommitment: "10+ hours/week"
+      title: "Running & Half-Marathon Training",
+      icon: <Footprints className="w-6 h-6 text-primary" />,
+      image: `${import.meta.env.BASE_URL}Photos/Running.jpg`,
+      description: "I am currently training for a half marathon after recovering from a knee injury. ",
+      skills: ["Endurance", "Discipline", "Injury-Smart Programming", "Recovery Protocols"],
+      achievements: ["Consistent Mileage Post-Injury", "5K & 10K PRs", "Half-Marathon Training"],
+      timeCommitment: "8–10 hours/week"
     },
     {
-      title: "Electronics Tinkering & Maker Projects",
-      icon: <Wrench className="w-6 h-6 text-primary" />,
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJvbmljcyUyMHRpbmtlcmluZyUyMG1ha2VyJTIwcHJvamVjdHN8ZW58MXx8fHwxNzU3MTc4NDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Love building random gadgets and automation projects for home and friends. From smart home devices to robotic pets, I enjoy turning wild ideas into working prototypes.",
-      skills: ["Arduino/Raspberry Pi", "Home Automation", "3D Printing", "IoT Development"],
-      achievements: ["Smart Mirror v3.0", "Automated Plant Watering System", "Custom LED Art Installations"],
-      timeCommitment: "8+ hours/week"
+      title: "Embroidery",
+      icon: <Pin className="w-6 h-6 text-primary" />,
+      image: `${import.meta.env.BASE_URL}Photos/Embroidery.PNG`,
+      description: "I love turning clothing into meaningful pieces with custom designs, it’s creative, and meditative.",
+      skills: ["Pattern Transfer", "Stitch Techniques", "Color Selection", "Patience & Precision"],
+      achievements: ["Custom Denim & Tees", "Gift Pieces", "Upcycled Wardrobe Details"],
+      timeCommitment: "2–3 hours/week"
     },
     {
-      title: "Photography & Digital Art",
-      icon: <Camera className="w-6 h-6 text-primary" />,
-      image: "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoeSUyMGNhbWVyYSUyMGFydGlzdGljfGVufDF8fHx8MTc1NzE3ODQ0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Capturing the world through both traditional and computational photography. I love experimenting with long exposures, macro photography, and creating digital art that blends technology with creativity.",
-      skills: ["Portrait Photography", "Landscape Photography", "Photo Editing", "Digital Art"],
-      achievements: ["Photography Exhibition Participant", "1000+ Instagram Followers", "Freelance Photo Work"],
-      timeCommitment: "6+ hours/week"
-    },
-    {
-      title: "Rock Climbing & Mountaineering",
-      icon: <Mountain className="w-6 h-6 text-primary" />,
-      image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlciUyMHJvY2slMjBjbGltYmluZyUyMG1vdW50YWluZWVyaW5nfGVufDF8fHx8MTc1NzE3ODQ0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Rock climbing has taught me problem-solving under pressure and systematic thinking - skills that directly translate to engineering challenges. Plus, it's a great way to disconnect from screens!",
-      skills: ["Sport Climbing", "Bouldering", "Route Finding", "Risk Assessment"],
-      achievements: ["5.11a Lead Climbing", "Multi-pitch Alpine Routes", "Climbing Mentor to 10+ People"],
-      timeCommitment: "12+ hours/week"
-    },
-    {
-      title: "Music Production & Sound Design",
-      icon: <Music className="w-6 h-6 text-primary" />,
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMHByb2R1Y3Rpb24lMjBzdHVkaW8lMjBzb3VuZCUyMGRlc2lnbnxlbnwxfHx8fDE3NTcxNzg0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Creating electronic music and sound design combines my love for technology with artistic expression. The precision required in mixing mirrors the attention to detail needed in engineering.",
-      skills: ["Electronic Music Production", "Sound Synthesis", "Audio Engineering", "Live Performance"],
-      achievements: ["Released 2 EPs on Spotify", "Local DJ Performances", "Custom Audio Hardware Builds"],
+      title: "Yoga & Mobility",
+      icon: <Heart className="w-6 h-6 text-primary" />,
+      image: `${import.meta.env.BASE_URL}Photos/Yoga.jpg`,
+      description: "Yoga pairs perfectly with running, prevents injuries, and clears my mind. It’s as much about focus as it is about flexibility.",
+      skills: ["Mobility", "Breathwork", "Balance", "Mindfulness"],
+      achievements: ["Daily Flows", "Integrated Pre/Post Run Practices", "Family Tradition"],
       timeCommitment: "5+ hours/week"
     },
     {
-      title: "Gaming & Competitive Esports",
-      icon: <Gamepad2 className="w-6 h-6 text-primary" />,
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBlc3BvcnRzJTIwY29tcGV0aXRpdmV8ZW58MXx8fHwxNzU3MTc4NDQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Strategic gaming has sharpened my analytical thinking and quick decision-making abilities. I particularly enjoy games that require resource management and long-term planning.",
-      skills: ["Strategic Thinking", "Team Coordination", "Quick Decision Making", "Performance Analysis"],
-      achievements: ["Diamond Rank in Competitive Games", "Local Tournament Participant", "Gaming Community Leader"],
-      timeCommitment: "8+ hours/week"
-    },
-    {
-      title: "Science Fiction & Technical Reading",
+      title: "Reading",
       icon: <Book className="w-6 h-6 text-primary" />,
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwZmljdGlvbiUyMGJvb2tzJTIwcmVhZGluZ3xlbnwxfHx8fDE3NTcxNzg0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Voracious reader of sci-fi and technical literature. Science fiction often inspires my engineering projects, while technical reading keeps me updated on emerging technologies.",
-      skills: ["Technical Research", "Critical Analysis", "Trend Identification", "Creative Inspiration"],
-      achievements: ["50+ Books/Year Reading Goal", "Technical Paper Reviews", "Book Club Organizer"],
+      image: `${import.meta.env.BASE_URL}Photos/Reading.PNG`,
+      description: "I’m a constant reader, from science fiction that sparks imagination to technical books that sharpen my engineering skills. Reading fuels both my creativity and curiosity.",
+      skills: ["Critical Thinking", "Research", "Trend Awareness", "Creative Inspiration"],
+      achievements: ["50+ Books/Year", "Technical Paper Reviews", "Active Book Club Member"],
       timeCommitment: "7+ hours/week"
     },
     {
-      title: "Digital Art & UI/UX Design",
+      title: "Crochet",
+      icon: <Scissors className="w-6 h-6 text-primary" />,
+      image: `${import.meta.env.BASE_URL}Photos/Crochet.jpg`,
+      description: "Crochet lets me slow down and create something tangible. I enjoy making cozy wearables and gifts for friends—it’s hands-on creativity that brings comfort and joy.",
+      skills: ["Pattern Reading", "Handcrafting", "Design Creativity", "Attention to Detail"],
+      achievements: ["Handmade Scarves & Tops", "Gift Projects", "Experimenting with Patterns"],
+      timeCommitment: "3–4 hours/week"
+    },
+    {
+      title: "Painting & Drawing",
       icon: <Palette className="w-6 h-6 text-primary" />,
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwYXJ0JTIwVUklMjBVWCUyMGRlc2lnbnxlbnwxfHx8fDE3NTcxNzg0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      description: "Creating digital interfaces and artwork helps me understand user experience from an engineer's perspective. This hobby directly improves my ability to design intuitive technical systems.",
-      skills: ["UI/UX Design", "Digital Illustration", "User Research", "Design Systems"],
-      achievements: ["Freelance Design Projects", "Open Source UI Contributions", "Design Challenge Winner"],
-      timeCommitment: "4+ hours/week"
+      image: `${import.meta.env.BASE_URL}Photos/Watercolor.PNG`,
+      description: "Painting and drawing give me a way to express ideas visually and unwind.",
+      skills: ["Sketching", "Color Theory", "Creative Expression", "Observation"],
+      achievements: ["Personal Art Collection", "Custom Gifts", "Experimentation with Mediums"],
+      timeCommitment: "4–5 hours/week"
+    },
+    {
+      title: "Surfing & Ocean Sports",
+      icon: <Waves className="w-6 h-6 text-primary" />,
+      image: `${import.meta.env.BASE_URL}Photos/Surf.jpg`,
+      description: "I have been surfing since childhood and now I love to surf when I can or go to artificial waves like the one in Waco, TX.",
+      skills: ["Balance", "Wave Reading", "Focus", "Resilience"],
+      achievements: ["Consistent Surf Sessions", "Improved Wave Timing", "Ocean Fitness"],
+      timeCommitment: "6+ hours/week"
+    },
+    {
+      title: "Swimming",
+      icon: <Droplet className="w-6 h-6 text-primary" />,
+      image: `${import.meta.env.BASE_URL}Photos/Swim.PNG`,
+      description: "I picked up swimming to complement my running and improve overall fitness. It’s a low-impact way to build endurance and strength while giving my joints a break.",
+      skills: ["Endurance", "Breathing Technique", "Full-Body Strength", "Mental Reset"],
+      achievements: ["Consistent Training", "Cross-Training for Running", "Improved Speed & Form"],
+      timeCommitment: "1-3 hours/week"
     }
+
   ];
 
   const personalValues = [
@@ -116,21 +117,8 @@ export function HobbiesPage({ onBack }: HobbiesPageProps) {
         </div>
       </div>
 
-      {/* Introduction */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Card className="mb-8 border-primary/20 bg-gradient-to-br from-card to-accent/5">
-          <CardContent className="pt-6">
-            <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-xl font-semibold mb-4 text-primary">Beyond the Engineering World</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                My hobbies aren't just ways to unwind—they're integral to who I am as an engineer. From the precision required in 
-                rock climbing to the creative problem-solving in music production, each pursuit brings unique perspectives that 
-                enhance my technical work. These activities keep me balanced, inspired, and constantly learning new approaches to 
-                challenges both in and out of the lab.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+        
 
         {/* Hobbies Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">

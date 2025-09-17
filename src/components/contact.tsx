@@ -31,11 +31,7 @@ export function Contact() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span>Your City, State</span>
+                  <span>+1 (806) 500-4785</span>
                 </div>
               </CardContent>
             </Card>
@@ -47,7 +43,7 @@ export function Contact() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <Button variant="outline" className="w-full justify-start" asChild>
-                  <a href="#" className="flex items-center space-x-3">
+                  <a href="https://www.linkedin.com/in/khisaleelebrun/" className="flex items-center space-x-3">
                     <Linkedin className="w-5 h-5" />
                     <span>LinkedIn Profile</span>
                   </a>
