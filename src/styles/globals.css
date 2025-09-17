@@ -1,0 +1,269 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* Vibrant Light Theme */
+  --background: #fefefe;
+  --foreground: #1a202c;
+  --card: #ffffff;
+  --card-foreground: #1a202c;
+  --popover: #ffffff;
+  --popover-foreground: #1a202c;
+  
+  /* Vibrant Electric Blue - Primary */
+  --primary: #0066ff;
+  --primary-hover: #0052cc;
+  --primary-soft: #4d94ff;
+  --primary-foreground: #ffffff;
+  
+  /* Vibrant Emerald - Secondary */
+  --secondary: #00d084;
+  --secondary-deep: #00a86b;
+  --secondary-soft: #4ddb9a;
+  --secondary-foreground: #ffffff;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  
+  /* Vibrant Coral - Accent */
+  --accent: #ff6b47;
+  --accent-deep: #ff4500;
+  --accent-soft: #ff8c73;
+  --accent-foreground: #ffffff;
+  
+  /* Supporting Vibrant Colors */
+  --info: #00bcd4;
+  --warning: #ff9800;
+  --destructive: #f44336;
+  --destructive-foreground: #ffffff;
+  --purple-accent: #9c27b0;
+  --yellow-accent: #ffeb3b;
+  --pink-accent: #e91e63;
+  --electric-teal: #00e5ff;
+  --pistachio-green: #93c572;
+  --custom-blue: #171796;
+  
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --input-background: #ffffff;
+  --switch-background: #e2e8f0;
+  --ring: #0066ff;
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  
+  /* Vibrant Chart Colors */
+  --chart-1: #0066ff;
+  --chart-2: #00d084;
+  --chart-3: #ff6b47;
+  --chart-4: #9c27b0;
+  --chart-5: #00bcd4;
+  --chart-6: #ff9800;
+  --chart-7: #e91e63;
+  --chart-8: #ffeb3b;
+  
+  --radius: 0.75rem;
+  --sidebar: #fefefe;
+  --sidebar-foreground: #1a202c;
+  --sidebar-primary: #0066ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f8fafc;
+  --sidebar-accent-foreground: #1a202c;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #0066ff;
+}
+
+.dark {
+  /* Core Neutrals - Dark Theme */
+  --background: #0E0F12;
+  --foreground: #E8EDF5;
+  --card: #14171D;
+  --card-foreground: #E8EDF5;
+  --popover: #14171D;
+  --popover-foreground: #E8EDF5;
+  
+  /* Electric Navy - Primary */
+  --primary: #1E58FF;
+  --primary-hover: #1746CC;
+  --primary-soft: #6F90FF;
+  --primary-foreground: #ffffff;
+  
+  /* Pistachio Green - Secondary */
+  --secondary: #9BE37B;
+  --secondary-deep: #6DBF55;
+  --secondary-soft: #C7F0B3;
+  --secondary-foreground: #0E0F12;
+  --muted: #171B21;
+  --muted-foreground: #A9B1BD;
+  
+  /* Peach Pink - Accent */
+  --accent: #FFB199;
+  --accent-deep: #FF8A7A;
+  --accent-soft: #FFD5C7;
+  --accent-foreground: #0E0F12;
+  
+  /* Supporting Colors */
+  --info: #2ED1E2;
+  --warning: #FFC858;
+  --destructive: #FF5A6D;
+  --destructive-foreground: #ffffff;
+  --purple-accent: #A88CFF;
+  --electric-teal: #00e5ff;
+  --pistachio-green: #93c572;
+  --custom-blue: #171796;
+  
+  --border: #2A2F38;
+  --input: #2A2F38;
+  --input-background: #171B21;
+  --switch-background: #2A2F38;
+  --ring: #1E58FF;
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  
+  /* Chart colors */
+  --chart-1: #1E58FF;
+  --chart-2: #9BE37B;
+  --chart-3: #FFB199;
+  --chart-4: #A88CFF;
+  --chart-5: #2ED1E2;
+  
+  --sidebar: #14171D;
+  --sidebar-foreground: #E8EDF5;
+  --sidebar-primary: #1E58FF;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #171B21;
+  --sidebar-accent-foreground: #E8EDF5;
+  --sidebar-border: #2A2F38;
+  --sidebar-ring: #1E58FF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-deep: var(--secondary-deep);
+  --color-secondary-soft: var(--secondary-soft);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-info: var(--info);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-purple-accent: var(--purple-accent);
+  --color-yellow-accent: var(--yellow-accent);
+  --color-pink-accent: var(--pink-accent);
+  --color-electric-teal: var(--electric-teal);
+  --color-pistachio-green: var(--pistachio-green);
+  --color-custom-blue: var(--custom-blue);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    /* Vibrant Light Background */
+    background: linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);
+    min-height: 100vh;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
