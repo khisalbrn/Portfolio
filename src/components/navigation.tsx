@@ -28,7 +28,7 @@ export function Navigation({ currentPage, onPageChange }: NavigationProps) {
               className="text-xl font-semibold text-muted-foreground hover:text-primary transition-colors duration-300 p-0"
               onClick={onPageChange}
             >
-              Engineering Portfolio
+              Khisa's Engineering Portfolio
             </Button>
           </div>
           

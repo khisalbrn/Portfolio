@@ -6,79 +6,39 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
   const [currentText, setCurrentText] = useState(0);
-  const textSequence = [
+    const textSequence = [
     "Creative",
-    "AI creator", 
-    "electrical engineer",
-    "UAS builder",
+    "An AI creator", 
+    "An Electrical Engineer",
+    "An UAS builder",
     "Engineering a better world"
   ];
 
   useEffect(() => {
-    if (currentText < textSequence.length - 1) {
-      const timer = setTimeout(() => {
-        setCurrentText(currentText + 1);
-      }, 2000); // Change every 2 seconds, but stay on last one
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => {
+      setCurrentText((prev) => (prev + 1) % textSequence.length);
+    }, 3000); // Change every 2 seconds forever
+
+    return () => clearTimeout(timer);
   }, [currentText, textSequence.length]);
+
 
   // Photo placeholder component
   const PhotoPlaceholder = () => (
-    <motion.div
+    <div
       className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-full blur-2xl transform scale-110"></div>
       <div className="relative w-full h-full rounded-full border-4 border-white shadow-lg overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
         <ImageWithFallback
           src={`${import.meta.env.BASE_URL}Photos/ProfilePic.png`}
-          alt="Khisa - Professional Engineer"
+          alt="Hi, I am Khisa"
           className="w-full h-full object-cover"
         />
         {/* Colorful border overlay */}
         <div className="absolute inset-0 rounded-full border-4 border-gradient-to-r from-primary via-secondary to-accent opacity-60"></div>
       </div>
-      {/* Floating colorful elements */}
-      <motion.div 
-        className="absolute -top-8 -right-8 w-6 h-6 bg-primary rounded-full shadow-lg"
-        animate={{ 
-          y: [0, -10, 0],
-          scale: [1, 1.2, 1],
-        }}
-        transition={{ 
-          duration: 3,
-          repeat: Infinity,
-          delay: 0
-        }}
-      />
-      <motion.div 
-        className="absolute -bottom-6 -left-6 w-4 h-4 bg-secondary rounded-full shadow-lg"
-        animate={{ 
-          y: [0, 10, 0],
-          scale: [1, 1.3, 1],
-        }}
-        transition={{ 
-          duration: 2.5,
-          repeat: Infinity,
-          delay: 0.5
-        }}
-      />
-      <motion.div 
-        className="absolute top-6 right-4 w-3 h-3 bg-accent rounded-full shadow-lg"
-        animate={{ 
-          x: [0, 5, 0],
-          scale: [1, 1.4, 1],
-        }}
-        transition={{ 
-          duration: 2,
-          repeat: Infinity,
-          delay: 1
-        }}
-      />
-    </motion.div>
+    </div>
   );
 
   return (
@@ -127,15 +87,7 @@ export function Hero() {
                   better world
                 </span>
               </motion.h1>
-              
-              <motion.p 
-                className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-              >
-                AI-powered drone systems and electrical engineering solutions that push the boundaries of autonomous technology
-              </motion.p>
+          
             </div>
             
             <motion.div 

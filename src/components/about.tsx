@@ -20,8 +20,8 @@ export function About({ onViewHobbies }: AboutProps) {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            Passionate electrical engineer specializing in
-            AI-driven autonomous systems and drone
+            I am a Passionate electrical engineer specializing in
+            AI and drone
             technology. I combine cutting-edge machine
             learning with robust electrical engineering
             principles to create intelligent solutions for

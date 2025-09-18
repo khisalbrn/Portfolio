@@ -40,17 +40,7 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
             </Button>
             <div className="flex-1">
               <h1 className="text-2xl font-bold">{project.title}</h1>
-              <p className="text-muted-foreground">Detailed project overview and technical implementation</p>
-            </div>
-            <div className="flex gap-2">
-              <Button 
-                size="sm"
-                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground transition-all duration-300"
-                onClick={() => window.open(project.demo, '_blank')}
-              >
-                <ExternalLink size={16} className="mr-2" />
-                View Demo
-              </Button>
+
             </div>
           </div>
         </div>
@@ -94,38 +84,23 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                 <p className="text-muted-foreground leading-relaxed">
                   {project.fullDescription}
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-primary">Key Objectives:</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                        Achieve high-performance real-time processing
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                        Implement robust error handling and recovery
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                        Ensure scalability and maintainability
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                        Deliver production-ready implementation
-                      </li>
-                    </ul>
+                
+                 <div className="space-y-2">
+                    <h4 className="font-medium text-primary flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4" />
+                      Key Objectives
+                    </h4>
+                    <div className="space-y-2">
+                      {project.keyObjectives.map((keyObjective, index) => (
+                      <div key={index} className="border-l-4 border-primary/30 pl-4">
+                        <div className="font-medium text-primary mb-2">{keyObjective}</div>
+                      </div>
+                    ))}
+                     </div> 
+                   
                   </div>
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-primary">Technical Approach:</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Modular architecture design</li>
-                      <li>• Agile development methodology</li>
-                      <li>• Comprehensive testing strategy</li>
-                      <li>• Continuous integration pipeline</li>
-                    </ul>
-                  </div>
-                </div>
+                  
+                
               </CardContent>
             </Card>
 
@@ -142,11 +117,13 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                   {project.challenges.map((challenge, index) => (
                     <div key={index} className="border-l-4 border-primary/30 pl-4">
                       <h4 className="font-medium text-primary mb-2">Challenge: {challenge}</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Implemented innovative solutions using advanced algorithms and optimization techniques. 
-                        This involved extensive research, prototyping, and iterative testing to ensure robust 
-                        performance under various conditions.
-                      </p>
+                      <div className="text-sm text-muted-foreground">
+                      {project.solutions.map((solution, index) => (
+                      <div key={index} >
+                        <div className="text-sm text-muted-foreground">{solution}</div>
+                      </div>
+                    ))}
+                     </div> 
                     </div>
                   ))}
                 </div>
@@ -169,13 +146,7 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                     </div>
                   ))}
                 </div>
-                <div className="mt-6">
-                  <p className="text-muted-foreground leading-relaxed">
-                    The project successfully met all technical requirements and exceeded performance expectations. 
-                    The implementation demonstrated significant improvements in efficiency, reliability, and 
-                    user experience, establishing new benchmarks for similar systems.
-                  </p>
-                </div>
+                
               </CardContent>
             </Card>
           </div>
@@ -207,15 +178,8 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                   </div>
                 </div>
 
-                <div>
-                  <h4 className="font-medium text-primary mb-1">Project Type</h4>
-                  <p className="text-sm text-muted-foreground">Research & Development</p>
-                </div>
-
-                <div>
-                  <h4 className="font-medium text-primary mb-1">Status</h4>
-                  <Badge className="bg-accent/20 text-accent">Completed</Badge>
-                </div>
+               
+                
               </CardContent>
             </Card>
 
@@ -246,30 +210,7 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
               </CardContent>
             </Card>
 
-            {/* Quick Stats */}
-            <Card className="border-primary/20 bg-gradient-to-br from-card to-accent/5">
-              <CardHeader>
-                <CardTitle>Quick Stats</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Code Lines</span>
-                  <span className="font-medium">~15,000</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Test Coverage</span>
-                  <span className="font-medium text-accent">94%</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Performance</span>
-                  <span className="font-medium text-accent">Optimized</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Documentation</span>
-                  <span className="font-medium">Complete</span>
-                </div>
-              </CardContent>
-            </Card>
+            
           </div>
         </div>
       </div>

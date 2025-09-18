@@ -111,7 +111,6 @@ export function HobbiesPage({ onBack }: HobbiesPageProps) {
             </Button>
             <div className="flex-1">
               <h1 className="text-2xl font-bold">Personal Interests & Hobbies</h1>
-              <p className="text-muted-foreground">The passions that fuel creativity and balance in my engineering journey</p>
             </div>
           </div>
         </div>
