@@ -17,7 +17,7 @@ export function Projects({ onProjectClick }: ProjectsProps) {
       id: 1,
       title: "Smart Mirror with Fashion AI",
       description:
-        "Smart mirror with an integrated AI to help you daily fashion choice. As well as daily widgets (weather, todos).",
+        "Smart mirror with an integrated AI to help you make daily fashion choice. As well as daily widgets (weather, todos).",
       fullDescription:
         "A smart mirror that blends utility and AI fashion advice. Using a camera and Roboflow/YOLO, it detects clothing items and suggests color coordination and outfit ideas based on trends or saved prefs. Hardware includes a custom wooden frame, a two-way mirror, and a display. Inspired by friends asking for outfit checks, now automated with an AI assistant.",
       image:
@@ -51,7 +51,7 @@ export function Projects({ onProjectClick }: ProjectsProps) {
       description:
         "Machine Learning for detecting buried landmines using inductive sensing.",
       fullDescription:
-        "Humanitarian project meant to be attached to the transport hexacopter for post-conflict farmland. Uses inductive sensing and envelope detection to pick up metallic signatures beneath soil Reliable metallic signature detection in tests.",
+        "Humanitarian project meant to be attached to the transport hexacopter for post-conflict farmland. Uses inductive sensing and envelope detection to pick up metallic signatures beneath soil. Reliable metallic signature detection in tests.",
       image:
         `${import.meta.env.BASE_URL}Photos/AiLandmine.png`,
       tags: ["Arduino", "Inductive Sensing", "Signal Processing", "Machine Learning", "Autonomy"],
@@ -186,9 +186,9 @@ export function Projects({ onProjectClick }: ProjectsProps) {
       id: 7,
       title: "Rocket League Rover (FPGA Soccer Bot)",
       description:
-        "Autonomous rover that localizes a 1 kHz emitting ball, then shoots it in a IR-defined goal.",
+        "Autonomous rover that localizes a 1 kHz emitting ball, then shoots it in an IR-defined goal.",
       fullDescription:
-        "Built on Basys 3 (Artix-7) with Verilog (Icarus)with a H-bridge driver for drive & kicker. To locate the ball, band-pass filters and microphone arrays track the 1 kHz ball tone. Once the ball is detected in the rover's launcher, it detects the IR beacons that define the goal to shoot accurately. Custom PCBs where made in KiCad for sensors, power, and motor control. We placed 2nd in penalty shootout competition.",
+        "Built on Basys 3 (Artix-7) with Verilog (Icarus)with a H-bridge driver for drive & kicker. To locate the ball, band-pass filters and microphone arrays track the 1 kHz ball tone. Once the ball is detected in the rover's launcher, it detects the IR beacons that define the goal to shoot accurately. Custom PCBs were made in KiCad for sensors, power, and motor control. We placed 2nd in penalty shootout competition.",
       image:
         `${import.meta.env.BASE_URL}Photos/RoverThumb.png`,
       tags: ["FPGA", "Verilog", "Basys 3", "Signal Processing", "KiCad"],
