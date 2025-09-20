@@ -26,7 +26,7 @@ export function HobbiesPage({ onBack }: HobbiesPageProps) {
       description: "I love turning clothing into meaningful pieces with custom designs, it’s creative, and meditative.",
       skills: ["Pattern Transfer", "Stitch Techniques", "Color Selection", "Patience & Precision"],
       achievements: ["Custom Denim & Tees", "Gift Pieces", "Upcycled Wardrobe Details"],
-      timeCommitment: "2–3 hours/week"
+      timeCommitment: "1–3 hours/week"
     },
     {
       title: "Yoga & Mobility",
@@ -35,34 +35,34 @@ export function HobbiesPage({ onBack }: HobbiesPageProps) {
       description: "Yoga pairs perfectly with running, prevents injuries, and clears my mind. It’s as much about focus as it is about flexibility.",
       skills: ["Mobility", "Breathwork", "Balance", "Mindfulness"],
       achievements: ["Daily Flows", "Integrated Pre/Post Run Practices", "Family Tradition"],
-      timeCommitment: "5+ hours/week"
+      timeCommitment: "3+ hours/week"
     },
     {
       title: "Reading",
       icon: <Book className="w-6 h-6 text-primary" />,
       image: `${import.meta.env.BASE_URL}Photos/Reading.PNG`,
-      description: "I’m a constant reader, from science fiction that sparks imagination to technical books that sharpen my engineering skills. Reading fuels both my creativity and curiosity.",
+      description: "I’m a constant reader, from science fiction to technical books or philosophy. Reading fuels both my creativity and curiosity.",
       skills: ["Critical Thinking", "Research", "Trend Awareness", "Creative Inspiration"],
-      achievements: ["50+ Books/Year", "Technical Paper Reviews", "Active Book Club Member"],
-      timeCommitment: "7+ hours/week"
+      achievements: ["10+ Books/Year read list", "Technical Paper Reviews", "Diverse Genre Exploration"],
+      timeCommitment: "5+ hours/week"
     },
     {
       title: "Crochet",
       icon: <Scissors className="w-6 h-6 text-primary" />,
       image: `${import.meta.env.BASE_URL}Photos/Crochet.jpg`,
-      description: "Crochet lets me slow down and create something tangible. I enjoy making cozy wearables and gifts for friends—it’s hands-on creativity that brings comfort and joy.",
+      description: "Crochet lets me slow down and create something tangible. I enjoy making cozy wearables and gifts for friends, it’s hands-on creativity.",
       skills: ["Pattern Reading", "Handcrafting", "Design Creativity", "Attention to Detail"],
       achievements: ["Handmade Scarves & Tops", "Gift Projects", "Experimenting with Patterns"],
-      timeCommitment: "3–4 hours/week"
+      timeCommitment: "1–4 hours/week"
     },
     {
       title: "Painting & Drawing",
       icon: <Palette className="w-6 h-6 text-primary" />,
       image: `${import.meta.env.BASE_URL}Photos/Watercolor.PNG`,
-      description: "Painting and drawing give me a way to express ideas visually and unwind.",
+      description: "Painting and drawing, using different techniques give me a way to express ideas visually and unwind.",
       skills: ["Sketching", "Color Theory", "Creative Expression", "Observation"],
       achievements: ["Personal Art Collection", "Custom Gifts", "Experimentation with Mediums"],
-      timeCommitment: "4–5 hours/week"
+      timeCommitment: "1–7 hours/week"
     },
     {
       title: "Surfing & Ocean Sports",
@@ -70,8 +70,8 @@ export function HobbiesPage({ onBack }: HobbiesPageProps) {
       image: `${import.meta.env.BASE_URL}Photos/Surf.jpg`,
       description: "I have been surfing since childhood and now I love to surf when I can or go to artificial waves like the one in Waco, TX.",
       skills: ["Balance", "Wave Reading", "Focus", "Resilience"],
-      achievements: ["Consistent Surf Sessions", "Improved Wave Timing", "Ocean Fitness"],
-      timeCommitment: "6+ hours/week"
+      achievements: ["Competitions", "Long & Short Board"],
+      timeCommitment: "whenever possible"
     },
     {
       title: "Swimming",
@@ -88,7 +88,7 @@ export function HobbiesPage({ onBack }: HobbiesPageProps) {
   const personalValues = [
     "Lifelong Learning",
     "Creative Problem Solving",
-    "Work-Life Balance", 
+    "Commincation & Empathy", 
     "Community Building",
     "Environmental Sustainability",
     "Innovation & Experimentation"

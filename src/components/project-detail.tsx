@@ -113,21 +113,30 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  {project.challenges.map((challenge, index) => (
-                    <div key={index} className="border-l-4 border-primary/30 pl-4">
-                      <h4 className="font-medium text-primary mb-2">Challenge: {challenge}</h4>
-                      <div className="text-sm text-muted-foreground">
-                      {project.solutions.map((solution, index) => (
-                      <div key={index} >
-                        <div className="text-sm text-muted-foreground">{solution}</div>
-                      </div>
-                    ))}
-                     </div> 
+              <div className="space-y-6">
+                {project.challenges.map((challenge: string, i: number) => {
+                  const solution = project.solutions?.[i]; // pair by index
+                  return (
+                    <div key={i} className="border-l-4 border-primary/30 pl-4">
+                      <h4 className="font-medium text-primary mb-2">
+                        Challenge: {challenge}
+                      </h4>
+
+                      {solution ? (
+                        <p className="text-sm text-muted-foreground">
+                          <span className="font-medium text-primary/80">Solution:</span> {solution}
+                        </p>
+                      ) : (
+                        <p className="text-sm text-muted-foreground italic">
+                          No matching solution provided.
+                        </p>
+                      )}
                     </div>
-                  ))}
-                </div>
-              </CardContent>
+                  );
+                })}
+              </div>
+            </CardContent>
+
             </Card>
 
             {/* Results & Impact */}
