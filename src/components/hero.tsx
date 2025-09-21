@@ -31,7 +31,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-full blur-2xl transform scale-110"></div>
       <div className="relative w-full h-full rounded-full border-4 border-white shadow-lg overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
         <ImageWithFallback
-          src={`${import.meta.env.BASE_URL}Photos/ProfilePic.png`}
+          src={`${import.meta.env.BASE_URL}Photos/ProfPicv2.jpg`}
           alt="Hi, I am Khisa"
           className="w-full h-full object-cover"
         />
